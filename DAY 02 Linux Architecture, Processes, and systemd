@@ -1,0 +1,59 @@
+Linux Architecture, Processes, and systemd
+
+DAY 02
+
+1️)Core Components of Linux?
+-Linux is mainly divided into three parts:
+*Kernel:
+-The heart of Linux
+-Talks directly to hardware (CPU, RAM, Disk, Network)
+-Without the kernel, Linux cannot run
+
+*User:
+-Where users and applications work
+-Includes:
+Shell (bash)
+Commands (ls, cd, ps, top)
+Applications (nginx, docker, python)
+
+*shell:
+-he first process started when Linux boots
+-Process ID = 1
+-Responsible for starting and managing system services
+
+2)How Processes Are Created and Managed?
+
+-A process is a running program (example: nginx, python, java)
+*Every process has:
+-PID (Process ID)
+-Parent process (PPID)
+*Process creation flow:
+-User runs a command
+-Shell requests the kernel
+-Kernel creates a new process
+-Process gets CPU time and memory
+*Process management includes:
+-Starting processes
+-Stopping/killing processes
+-Monitoring CPU & memory usage
+*Common commands:
+-ps → view running processes
+-top / htop → live process monitoring
+-kill → stop a process
+
+3)What systemd Does and Why It Matters?
+
+-systemd is the modern service manager in Linux.
+*It:
+-Starts services at boot
+-Stops, restarts, and monitors services
+-Handles system logs and dependencies
+Examples:
+-Start a service: systemctl start nginx
+-Stop a service: systemctl stop nginx
+-Check status: systemctl status nginx
+-Enable service on boot: systemctl enable nginx
+*Why systemd is important for DevOps:
+-Manages servers automatically.
+-Restarts crashed services
+
